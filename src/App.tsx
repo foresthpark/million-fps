@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { block, For } from "million/react";
 import rainbowGradient from "rainbow-gradient";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 type ColorProps = { colors: string[] };
 
@@ -80,7 +81,14 @@ function App() {
     };
   }, []);
 
-  return <ReactColors colors={colors} />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/react" element={<ReactColors colors={colors} />} />
+        <Route path="/million" element={<MillionColors colors={colors} />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
