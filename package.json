@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "million": "^2.4.6",
+    "rainbow-colors-array-ts": "^1.0.5",
+    "rainbow-gradient": "^1.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tinycolor2": "^1.6.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
