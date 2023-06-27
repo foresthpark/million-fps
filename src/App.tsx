@@ -52,6 +52,10 @@ const MillionColors = block(({ colors }: ColorProps) => {
   );
 });
 
+const Home = () => {
+  return <div>Home</div>;
+};
+
 const rainbowColors = rainbowGradient(360).map(
   ([r, g, b]) => `rgb(${r},${g},${b})`
 );
@@ -84,6 +88,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/react" element={<ReactColors colors={colors} />} />
         <Route path="/million" element={<MillionColors colors={colors} />} />
       </Routes>
